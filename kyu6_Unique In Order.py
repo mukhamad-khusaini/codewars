@@ -2,30 +2,32 @@ def unique_in_order(sequence):
     l=[]
     c=len(sequence)-1
     i=0
-    while c<=i:
+    while i<=c:
         if len(sequence)==0:
             return l
         elif len(sequence)==1:
             l.append(sequence[i])
-            return
+            return l
         elif i==c:
-            pass
+            l.append(sequence[i])
+            break
         elif sequence[i]==sequence[i+1]:
-            co=i
             lo=0
-            while lo==c:
-                if sequence[lo]==sequence[i]:
+            while i+lo<=c:
+                if sequence[i]==sequence[i+lo]:
                     lo+=1
                 else:
-                    pass
-
-
-        
-
-
-
+                    l.append(sequence[i])
+                    i+=lo
+                    break
+            if(i+lo==c+1): 
+                l.append(sequence[i])
+                break
+        else:
+            l.append(sequence[i])
+            i+=1
             
     return l
 
 
-print(unique_in_order("AAABaBB"))
+print(unique_in_order("PPPPVVVtBVVUUUPPPxxxxxQQQnnnddT"))
