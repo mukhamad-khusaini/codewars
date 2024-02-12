@@ -18,5 +18,5 @@ def is_valid_walk(walk):
 
     return (sum(l.values()) == 10 and l['n']-l['s']==0 and l['w']-l['e']==0 )
 
-print(is_valid_walk(['n','n','s','w','e']))
+print(is_valid_walk(['n','n','s','s','e']))
         
