@@ -15,6 +15,4 @@ def remove(st):
 
 
 
-print(remove("Hai!!!!!j!!"))
-
-# print("Hai!"[3:])
+print(remove("Hai!!!!j!!"))
