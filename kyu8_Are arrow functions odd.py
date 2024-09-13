@@ -1,0 +1,1 @@
+odds = lambda i: [s for s in i if s%2!=0]
