@@ -1,0 +1,3 @@
+websites = []
+
+websites.append("codewars")
