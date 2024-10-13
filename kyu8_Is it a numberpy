@@ -1,0 +1,4 @@
+def is_digit(s):
+    return False if True in [i.isalpha() for i in s] or " " in s or "-" else True
+
+print(is_digit("12"))
