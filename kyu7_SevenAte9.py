@@ -1,4 +1,6 @@
 def seven_ate9(str_):
-    return [f"{i}{y}" if x=="9" else f"{i}{x}{y}" for i,x,y in zip(str_,str_[1:],str_[2:])]
-
-print(seven_ate9("1245797"))
+    while "797" in str_:
+        str_ = str_.replace("797", "77")
+    return str_
+    
+print(seven_ate9("124579797"))
