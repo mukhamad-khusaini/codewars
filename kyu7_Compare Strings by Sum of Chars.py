@@ -1,17 +1,22 @@
 def compare(s1, s2):
-    str1=[ord(i.upper()) if i.isalpha() else 0 for i in s1]
-    str2=[ord(i.upper()) if i.isalpha() else 0 for i in s2]
-    if 0 in str1 or s1 == "": str1 = 0
-    if 0 in str2 or s2=="": str2 = 0
+    v1=0
+    v2=0
+    num=[str(i) for i in range(10)]
+    if s1!=0 and s1!=None:
+        for i in s1.upper():
+            if i in num:
+                v1=0
+                break
+            v1+=ord(i)
+    if s2!=0 and s2!=None:
+        for i in s2.upper():
+            if i in num:
+                v2=0
+                break
+            v2+=ord(i)
+    
+    return v1==v2
 
-    if str1==0 and str2==0:
-        return True
-    elif str1==0 and type(str2)==type([]):
-        return False
-    elif str2==0 and type(str1)==type([]):
-        return False
-    else:
-        return sum(str1)==sum(str2)
 
 
-print("zs1".isalpha())
+print([1,2,3]+[5,6,7])
