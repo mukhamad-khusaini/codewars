@@ -1,7 +1,7 @@
+import math
 def factorial(n):
-    s=1
-    for i in [i for i in range(1,n+1)]:
-        s*=i
-    return s
+    if n<0 or n>12:
+        raise ValueError()
+    return math.factorial(n)
 
 print(factorial(7))
