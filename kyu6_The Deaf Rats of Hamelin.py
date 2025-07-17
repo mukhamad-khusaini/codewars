@@ -8,7 +8,9 @@ def count_deaf_rats(town):
     def chunk_rats(rats_str):
         return [rats_str[i:i+2] for i in range(0, len(rats_str), 2)]
     
-    deaf_left = [rat for rat in chunk_rats(left_side) if rat == "~O"]
-    deaf_right = [rat for rat in chunk_rats(right_side) if rat == "O~"]
+    deaf_left = chunk_rats(left_side).count("O~")
+    deaf_right = chunk_rats(right_side).count("~O")
     
-    return len(deaf_left) + len(deaf_right)
+    return deaf_right+deaf_left
+
+print(count_deaf_rats("~O~O~O~OP~O~OO~"))
