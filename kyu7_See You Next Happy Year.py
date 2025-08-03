@@ -1,5 +1,5 @@
 def next_happy_year(year):
-    y=year
+    y=year+1
     while True:
         if len(set(str(y))) == len(str(year)):
             return y
