@@ -1,6 +1,9 @@
 def remove_parentheses(st):
-    frst=st.split("(")[0]
-    scnd=st.split(")")[-1]
-    return frst+scnd
+    result=[]
+    content=st.split("(")
+    while content:
+        result.append(content[0])
+        content.pop(0)
+        print(content)
 
-print(remove_parentheses("ing ngarso(suy(sdasd)n)Tulodo"))
+# print(remove_parentheses("in(g) ngarso(suy(sdasd)n)Tulodo"))
