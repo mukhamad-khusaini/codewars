@@ -1,5 +1,8 @@
 def get_strings(city):
-    uniq=list(set(city.lower()))
-    return ",".join([ uniq[i] + ":" + city.lower().count(uniq[i])*"*" for i in range(len(uniq))])
+    uniqq=[]
+    for i in city.lower().replace(" ",""):
+        if i in uniqq: continue
+        uniqq.append(i)
+    return ",".join([ uniqq[i] + ":" + city.lower().count(uniqq[i])*"*" for i in range(len(uniqq))])
 
-print(get_strings("Chicago"))
+print(get_strings("Chicago offer"))
