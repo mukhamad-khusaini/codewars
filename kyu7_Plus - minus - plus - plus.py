@@ -13,11 +13,11 @@ def catch_sign_change(lst):
             if sign == "p": continue
             else: 
                 change+=1
-                sign="n"
+                sign="p"
         elif lst[i] < 0:
             if sign == "n": continue
             else: 
                 change+=1
-                sign="p"
+                sign="n"
         
     return change
