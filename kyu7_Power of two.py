@@ -1,8 +1,3 @@
-import math
-def power_of_two(x):
-  try:
-    return str((math.log(x,2))).split(".")
-  except:
-    return False
+def power_of_two(n):
+    return n > 0 and (n & (n - 1)) == 0
 
-print(power_of_two(590295810358705651719))
